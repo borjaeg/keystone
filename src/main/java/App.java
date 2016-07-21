@@ -18,7 +18,7 @@ public class App {
             if (stmt.getPredicate().toString().equals("http://dbpedia.org/ontology/abstract")){
                 // Silly Heuristic to filter english abstracts
                 if (stmt.getObject().toString().contains("hurricane"))
-                    System.out.println(stmt.getObject().toString());
+                    NERProcessing.process(stmt.getObject().toString());
             }
         }
     }
