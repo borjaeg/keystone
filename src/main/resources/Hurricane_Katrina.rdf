@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dct="http://purl.org/dc/terms/"
+	xmlns:dbo="http://dbpedia.org/ontology/"
+	xmlns:dbp="http://dbpedia.org/property/"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:prov="http://www.w3.org/ns/prov#" >
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katrina">
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Process100029677" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/PhysicalEntity100001930" />
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Hurricane111467018" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Storm111462526" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/AtmosphericPhenomenon111425580" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Windstorm111527014" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Cyclone111443721" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/RetiredAtlanticHurricanes" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/PhysicalPhenomenon111419404" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Category5AtlanticHurricanes" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/NaturalPhenomenon111408559" />
+    <rdf:type rdf:resource="http://dbpedia.org/class/yago/Phenomenon100034213" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Hurricanes_in_Louisiana" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Hurricanes_in_Florida" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:2005_Atlantic_hurricane_season" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Retired_Atlantic_hurricanes" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Category_5_Atlantic_hurricanes" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Hurricane_Katrina" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Federal_Emergency_Management_Agency_critics" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:George_W._Bush_administration_controversies" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Articles_containing_video_clips" />
+    <dct:subject rdf:resource="http://dbpedia.org/resource/Category:Urban_decay_in_the_United_States" />
+    <dbo:wikiPageID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2569378</dbo:wikiPageID>
+    <dbo:wikiPageRevisionID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">682512172</dbo:wikiPageRevisionID>
+    <dbo:wikiPageExternalLink rdf:resource="https://web.archive.org/web/20080613172751/http:/www.hpc.ncep.noaa.gov/tropical2005/KATRINA/KATRINA_archive.shtml" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.katrinasangels.org/" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.lgs.lsu.edu/deploy/uploads/11strategies.pdf" />
+    <dbo:wikiPageExternalLink rdf:resource="http://cimss.ssec.wisc.edu/goes/misc/050829/050829.html" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.city-journal.org/html/16_2_houston.html" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.nhc.noaa.gov/archive/2005/KATRINA.shtml" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.streetgangs.com/katrina/" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.photosfromkatrina.com/" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.nasa.gov/vision/earth/lookingatearth/h2005_katrina.html" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.hurricane-katrina.org/" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.levees.org/" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.davidmetraux.com/news/2006/hurricane_katrina.html" />
+    <dbo:wikiPageExternalLink rdf:resource="http://www.dollarsandsense.org/archives/2007/0907evans.html" />
+    <dbp:wordnet_type rdf:resource="http://www.w3.org/2006/03/wn/wn20/instances/synset-breed-noun-2" />
+    <owl:sameAs rdf:resource="http://nl.dbpedia.org/resource/Katrina_(orkaan)" />
+    <owl:sameAs rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+    <owl:sameAs rdf:resource="http://rdf.freebase.com/ns/m.07nnlb" />
+    <owl:sameAs rdf:resource="http://ja.dbpedia.org/resource/ハリケーン・カトリーナ" />
+    <owl:sameAs rdf:resource="http://data.nytimes.com/N24812451550854169070" />
+    <owl:sameAs rdf:resource="http://ko.dbpedia.org/resource/허리케인_카트리나" />
+    <owl:sameAs rdf:resource="http://sw.opencyc.org/concept/Mx4r-EloPiuDEdqAAAACs6hnlQ" />
+    <owl:sameAs rdf:resource="http://www.wikidata.org/entity/Q16422" />
+    <owl:sameAs rdf:resource="http://fr.dbpedia.org/resource/Ouragan_Katrina" />
+    <owl:sameAs rdf:resource="http://cs.dbpedia.org/resource/Hurikán_Katrina" />
+    <owl:sameAs rdf:resource="http://id.dbpedia.org/resource/Badai_Katrina" />
+    <owl:sameAs rdf:resource="http://eu.dbpedia.org/resource/Katrina_urakana" />
+    <owl:sameAs rdf:resource="http://pl.dbpedia.org/resource/Huragan_Katrina" />
+    <owl:sameAs rdf:resource="http://es.dbpedia.org/resource/Huracán_Katrina" />
+    <owl:sameAs rdf:resource="http://wikidata.dbpedia.org/resource/Q16422" />
+    <owl:sameAs rdf:resource="http://yago-knowledge.org/resource/Hurricane_Katrina" />
+    <owl:sameAs rdf:resource="http://pt.dbpedia.org/resource/Furacão_Katrina" />
+    <owl:sameAs rdf:resource="http://de.dbpedia.org/resource/Hurrikan_Katrina" />
+    <owl:sameAs rdf:resource="http://it.dbpedia.org/resource/Uragano_Katrina" />
+    <owl:sameAs rdf:resource="http://el.dbpedia.org/resource/Τυφώνας_Κατρίνα" />
+    <dbp:fatalities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1245</dbp:fatalities>
+    <dbp:imageName rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonthDay">--08-28</dbp:imageName>
+    <dbp:imageName xml:lang="en">Hurricane Katrina at peak strength</dbp:imageName>
+    <dbp:type xml:lang="en">hurricane</dbp:type>
+    <dbp:year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</dbp:year>
+    <dbp:formed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-08-23</dbp:formed>
+    <rdfs:label xml:lang="ja">ハリケーン・カトリーナ</rdfs:label>
+    <rdfs:label xml:lang="fr">Ouragan Katrina</rdfs:label>
+    <rdfs:label xml:lang="de">Hurrikan Katrina</rdfs:label>
+    <rdfs:label xml:lang="ru">Катрина (ураган)</rdfs:label>
+    <rdfs:label xml:lang="en">Hurricane Katrina</rdfs:label>
+    <rdfs:label xml:lang="zh">颶風卡特里娜</rdfs:label>
+    <rdfs:label xml:lang="es">Huracán Katrina</rdfs:label>
+    <rdfs:label xml:lang="nl">Katrina (orkaan)</rdfs:label>
+    <rdfs:label xml:lang="it">Uragano Katrina</rdfs:label>
+    <rdfs:label xml:lang="pl">Huragan Katrina</rdfs:label>
+    <rdfs:label xml:lang="pt">Furacão Katrina</rdfs:label>
+    <rdfs:label xml:lang="ar">إعصار كاترينا</rdfs:label>
+    <rdfs:comment xml:lang="pt">O Furacão Katrina foi uma tempestade tropical que alcançou a categoria 5 da escala de furacões de Saffir-Simpson (regredindo a 4 antes de chegar a costa sudeste dos Estados Unidos). Os ventos do furacão alcançaram mais de 280 quilômetros por hora, e causaram grandes prejuízos na região litorânea do sul dos Estados Unidos, especialmente em torno da região metropolitana de Nova Orleans, em 29 de agosto de 2005 onde mais de um milhão de pessoas foram evacuadas.</rdfs:comment>
+    <rdfs:comment xml:lang="it">L&#39;uragano Katrina è stato uno tra i cinque uragani più gravi della storia degli Stati Uniti, il più grave in termini di danni economici e uno dei più gravi dal punto di vista del numero di morti. È stato il sesto uragano atlantico più forte mai registrato e il terzo più forte che abbia mai raggiunto le coste degli Stati Uniti.</rdfs:comment>
+    <rdfs:comment xml:lang="ru">Ураган «Катрина» (англ. Hurricane Katrina) — самый разрушительный ураган в истории США. Это был ураган 5 категории по шкале ураганов Саффира-Симпсона, шестой по силе ураган Атлантического бассейна за всю историю наблюдений. Произошёл в конце августа 2005 года. Наиболее тяжёлый ущерб был причинён Новому Орлеану в Луизиане, где под водой оказалось около 80 % площади города. В результате стихийного бедствия погибли 1836 жителей, экономический ущерб составил $125 млрд (оценка, 2007)</rdfs:comment>
+    <rdfs:comment xml:lang="de">Der Hurrikan Katrina gilt als eine der verheerendsten Naturkatastrophen in der Geschichte der Vereinigten Staaten. Der Hurrikan richtete Ende August 2005 in den südöstlichen Teilen der USA, insbesondere an der dortigen Golfküste, enorme Schäden an und erreichte zeitweise die Stufe 5. Zu den betroffenen Bundesstaaten gehörten Florida, Louisiana (besonders der Großraum New Orleans), Mississippi, Alabama und Georgia.Durch den Sturm und seine Folgen kamen etwa 1.800 Menschen ums Leben.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">De orkaan Katrina was de elfde storm, de vijfde orkaan en de op twee na grootste orkaan van het Atlantische orkaanseizoen in 2005. De orkaan veroorzaakte 3.576 doden en voor ruim 153 miljard dollar schade.</rdfs:comment>
+    <rdfs:comment xml:lang="pl">Huragan Katrina – jeden z trzydziestu najbardziej morderczych huraganów, jakie kiedykolwiek nawiedziły Stany Zjednoczone. Wśród zarejestrowanych atlantyckich cyklonów był to szósty pod względem siły wiatru. Huragan uformował się 23 sierpnia 2005 roku na Bahamach. Wkrótce potem przeszedł przez południową Florydę, powodując pierwsze ofiary śmiertelne, jeszcze jako huragan trzeciej kategorii w Skali Saffira Simpsona. Po przejściu nad Zatoką Meksykańską siła wiatru wzrosła do ponad 250 km/h.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Hurricane Katrina  was the eleventh named storm and fifth hurricane of the 2005 Atlantic hurricane season. It was the costliest natural disaster, as well as one of the five deadliest hurricanes, in the history of the United States. The storm is currently ranked as the third most intense United States landfalling tropical cyclone, behind only the 1935 Labor Day hurricane and Hurricane Camille in 1969.</rdfs:comment>
+    <rdfs:comment xml:lang="ja">ハリケーン・カトリーナ (Hurricane Katrina) は、2005年8月末にアメリカ合衆国南東部を襲った大型のハリケーンである。ハリケーンの強さを表すシンプソン・スケールで、最大時で最高のカテゴリー5、ルイジアナ州上陸時でカテゴリー3である。時間は全てアメリカ合衆国・カナダ中部夏時間、（UTC-5）である。</rdfs:comment>
+    <rdfs:comment xml:lang="es">El huracán Katrina fue el más destructivo y el que causó más víctimas mortales de la temporada de huracanes en el Atlántico de 2005. Se trata del huracán que ha provocado más daños económicos, así como uno de los cinco huracanes más mortíferos, de la historia de Estados Unidos.  Asimismo, el Katrina es el sexto más intenso de todos los huracanes del Atlántico registrados.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">L’ouragan Katrina, de la saison cyclonique 2005 dans l&#39;océan Atlantique Nord, est l&#39;un des ouragans les plus puissants de l&#39;histoire des États-Unis et l&#39;un des six ouragans les plus forts jamais enregistrés. Environ 1 836 personnes sont mortes, victimes de l&#39;ouragan et des très fortes inondations, faisant de Katrina l&#39;ouragan le plus meurtrier depuis l&#39;ouragan Mitch en 1998.</rdfs:comment>
+    <rdfs:comment xml:lang="ar">إعصار كاترينا أكثر الأعاصير دموية والأكثر ضرراً من كل الأعاصير المدارية في المحيط الأطلسي خلال موسم الأعاصير في عام 2005، وهذه الكارثة الطبيعية هي الأكثر تكلفة، ويعتبر أحد أعنف خمسة أعاصير في تاريخ الولايات المتحدة الأمريكية، ويعتبر سابع أكبر أعاصير البحر المتوسط على الإطلاق. وقد بلغ عدد الوفيات من الأعاصير التي ضربت الولايات المتحدة في عام 2005 ميلادي حوالي 1833 قتيل، مما يجعلها أكثر الأعاصير فتكاً في تاريخ الولايات المتحدة الأمريكية منذ عام 1928 ميلادي.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Murphy_Oil_USA_refinery_spill" />
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Hurricane_preparedness_for_New_Orleans" />
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Social_effects_of_Hurricane_Katrina" />
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/List_of_retired_Atlantic_hurricane_names" />
+    <dbp:name xml:lang="en">Hurricane Katrina</dbp:name>
+    <foaf:depiction rdf:resource="http://commons.wikimedia.org/wiki/Special:FilePath/Hurricane_Katrina_August_28_2005_NASA.jpg" />
+    <foaf:isPrimaryTopicOf rdf:resource="http://en.wikipedia.org/wiki/Hurricane_Katrina" />
+    <dbo:thumbnail rdf:resource="http://commons.wikimedia.org/wiki/Special:FilePath/Hurricane_Katrina_August_28_2005_NASA.jpg?width=300" />
+    <prov:wasDerivedFrom rdf:resource="http://en.wikipedia.org/wiki/Hurricane_Katrina?oldid=682512172" />
+    <dbo:abstract xml:lang="en">Hurricane Katrina  was the eleventh named storm and fifth hurricane of the 2005 Atlantic hurricane season. It was the costliest natural disaster, as well as one of the five deadliest hurricanes, in the history of the United States. The storm is currently ranked as the third most intense United States landfalling tropical cyclone, behind only the 1935 Labor Day hurricane and Hurricane Camille in 1969. Overall, at least 1,245 people died in the hurricane and subsequent floods, making it the deadliest United States hurricane since the 1928 Okeechobee hurricane. Total property damage was estimated at $108 billion (2005 USD), roughly four times the damage wrought by Hurricane Andrew in 1992.Katrina originated over the Bahamas on August 23 from the interaction between a tropical wave and the remnants of Tropical Depression Ten. Early the following day, the new depression intensified into Tropical Storm Katrina. The cyclone headed generally westward toward Florida and strengthened into a hurricane only two hours before making landfall Hallandale Beach and Aventura on August 25. After very briefly weakening to a tropical storm, Katrina emerged into the Gulf of Mexico on August 26 and began to rapidly deepen. The storm strengthened to a Category 5 hurricane over the warm waters of the Gulf of Mexico, but weakened before making its second landfall as a Category 3 hurricane on August 29 in southeast Louisiana.Katrina caused severe destruction along the Gulf coast from central Florida to Texas, much of it due to the storm surge. The most significant number of deaths occurred in New Orleans, Louisiana, which flooded as its levee system failed, in many cases hours after the storm had moved inland. Eventually 80% of the city and large tracts of neighboring parishes became flooded, and the floodwaters lingered for weeks.However, the worst property damage occurred in coastal areas, such as Mississippi beachfront towns; over 90 percent of these were flooded. Boats and casino barges rammed buildings, pushing cars and houses inland;  water reached 6–12 miles (10–19 km) from the beach.The hurricane surge protection failures in New Orleans are considered the worst civil engineering disaster in U.S. history, and prompted a lawsuit against the U.S. Army Corps of Engineers (USACE), the designers and builders of the levee system as mandated by the Flood Control Act of 1965. Responsibility for the failures and flooding was laid squarely on the Army Corps in January 2008 by Judge Stanwood Duval, U.S. District Court, but the federal agency could not be held financially liable because of sovereign immunity in the Flood Control Act of 1928. There was also an investigation of the responses from federal, state and local governments, resulting in the resignation of Federal Emergency Management Agency (FEMA) director Michael D. Brown, and of New Orleans Police Department (NOPD) Superintendent Eddie Compass. Many other government officials were criticized for their responses, especially New Orleans Mayor Ray Nagin, Louisiana Governor Kathleen Blanco, and President George W. Bush.Several agencies including the United States Coast Guard (USCG), National Hurricane Center (NHC), and National Weather Service (NWS) were commended for their actions. They provided accurate hurricane weather tracking forecasts with sufficient lead time.</dbo:abstract>
+    <dbo:abstract xml:lang="fr">L’ouragan Katrina, de la saison cyclonique 2005 dans l&#39;océan Atlantique Nord, est l&#39;un des ouragans les plus puissants de l&#39;histoire des États-Unis et l&#39;un des six ouragans les plus forts jamais enregistrés. Environ 1 836 personnes sont mortes, victimes de l&#39;ouragan et des très fortes inondations, faisant de Katrina l&#39;ouragan le plus meurtrier depuis l&#39;ouragan Mitch en 1998. Les dégâts ont été estimés à plus de 108 milliards de dollars (2005), environ le quadruple des dommages causés par l&#39;ouragan Andrew en 1992 .Cet ouragan est l’un des plus étendus (rayon de plus de 650 km dont 190 de vents de force cyclonique et 340 de tempête tropicale). Il a atteint les côtes à proximité de La Nouvelle-Orléans et de Biloxi le 29 août 2005 vers 11 heures (heure locale) évitant partiellement la ville de La Nouvelle-Orléans en bifurquant au dernier moment vers l’est. Son œil est large de 40 kilomètres et ses vents ont pu atteindre 280 km/h. L’évacuation de la ville a été tentée en raison des risques de submersion d’une partie de celle-ci, bâtie sous le niveau de la mer. Au large, des vagues de 11 mètres ont pu être observées. Le 28 au soir, Katrina avait déjà fait 9 morts. Après le passage de l’ouragan, on trouva plusieurs États des États-Unis sous les eaux. Katrina a ainsi plongé La Nouvelle-Orléans et toute la Louisiane dans la désolation.</dbo:abstract>
+    <dbo:abstract xml:lang="de">Der Hurrikan Katrina gilt als eine der verheerendsten Naturkatastrophen in der Geschichte der Vereinigten Staaten. Der Hurrikan richtete Ende August 2005 in den südöstlichen Teilen der USA, insbesondere an der dortigen Golfküste, enorme Schäden an und erreichte zeitweise die Stufe 5. Zu den betroffenen Bundesstaaten gehörten Florida, Louisiana (besonders der Großraum New Orleans), Mississippi, Alabama und Georgia.Durch den Sturm und seine Folgen kamen etwa 1.800 Menschen ums Leben. Der Sachschaden belief sich auf etwa 108 Milliarden US-Dollar. Insbesondere die Stadt New Orleans war stark betroffen: Durch ihre geographische Lage führten zwei Brüche im Deichsystem dazu, dass bis zu 80 Prozent des Stadtgebietes bis zu 7,60 Meter tief unter Wasser standen.</dbo:abstract>
+    <dbo:abstract xml:lang="pt">O Furacão Katrina foi uma tempestade tropical que alcançou a categoria 5 da escala de furacões de Saffir-Simpson (regredindo a 4 antes de chegar a costa sudeste dos Estados Unidos). Os ventos do furacão alcançaram mais de 280 quilômetros por hora, e causaram grandes prejuízos na região litorânea do sul dos Estados Unidos, especialmente em torno da região metropolitana de Nova Orleans, em 29 de agosto de 2005 onde mais de um milhão de pessoas foram evacuadas. O furacão passou pelo sul da Flórida, causando em torno de dois bilhões de dólares de prejuízo e causando seis mortes diretas. Foi a 11ª tempestade de 2005 a receber nome, sendo o quarto entre os furacões. O Furacão Katrina causou aproximadamente mil mortes, sendo um dos furacões mais destrutivos a ter atingido os Estados Unidos. O furacão paralisou muito da extração de petróleo e gás natural dos Estados Unidos, uma vez que boa parte do petróleo americano é extraído no Golfo do México.</dbo:abstract>
+    <dbo:abstract xml:lang="nl">De orkaan Katrina was de elfde storm, de vijfde orkaan en de op twee na grootste orkaan van het Atlantische orkaanseizoen in 2005. De orkaan veroorzaakte 3.576 doden en voor ruim 153 miljard dollar schade.</dbo:abstract>
+    <dbo:abstract xml:lang="pl">Huragan Katrina – jeden z trzydziestu najbardziej morderczych huraganów, jakie kiedykolwiek nawiedziły Stany Zjednoczone. Wśród zarejestrowanych atlantyckich cyklonów był to szósty pod względem siły wiatru. Huragan uformował się 23 sierpnia 2005 roku na Bahamach. Wkrótce potem przeszedł przez południową Florydę, powodując pierwsze ofiary śmiertelne, jeszcze jako huragan trzeciej kategorii w Skali Saffira Simpsona. Po przejściu nad Zatoką Meksykańską siła wiatru wzrosła do ponad 250 km/h. Katrina stała się wtedy huraganem piątej kategorii. Największe zniszczenia cyklon ten spowodował w Nowym Orleanie, w stanie Luizjana. System przeciwpowodziowy w mieście okazał się nieszczelny w ponad pięćdziesięciu miejscach – prawie każdy wał przeciwpowodziowy w mieście został ostatecznie zniszczony przez burzę. Zalane zostało 80% miasta. W wyniku huraganu zginęło 1836 osób, a 705 zostało uznane za zaginione. Ten bilans uczynił Katrinę najbardziej morderczym huraganem od czasu huraganu Okeechobee, który nawiedził miasto w 1928 roku. Zniszczenia w samym Nowym Orleanie wyniosły ponad 81 miliardów dolarów. Tym samym był to jeden z cyklonów, które przyniosły w Stanach Zjednoczonych największe straty materialne.Tak duże uszkodzenia wałów przeciwpowodziowych skłoniły amerykański wymiar sprawiedliwości do wszczęcia śledztwa w sprawie ich projektowania i konstrukcji. To zadanie powierzono wcześniej Korpusowi Inżynieryjnemu Armii Stanów Zjednoczonych. Przeprowadzono też śledztwo w sprawie spóźnionej reakcji rządu, prezydenta i samorządów lokalnych. Doprowadziło to do ustąpienia szefa Federalnej Agencji Zarządzania Kryzysowego.W dwa lata po kataklizmie – w sierpniu 2007 – liczba mieszkańców Nowego Orleanu oceniana była na 273 tysięcy, zaś przed przejściem Katriny w mieście żyło prawie pół miliona ludzi. Nadal trwają prace w celu usunięcia skutków cyklonu. Choć większość miasta jest ponownie otwarta dla mieszkańców, a dzielnice, gdzie straty były mniej dotkliwe, ponownie funkcjonują, niektóre części miasta najbardziej dotknięte przez huragan mają nadal problem z zapewnieniem sprawnych usług miejskich. Najbardziej zniszczona dzielnica – Lower Ninth Ward – do dziś nie jest oficjalnie otwarta dla mieszkańców.Trzy lata po przejściu Katriny nad miastem tysiące ludzi nadal żyło w przyczepach, gdyż ich domy nie zostały jeszcze odbudowane.</dbo:abstract>
+    <dbo:abstract xml:lang="ru">Ураган «Катрина» (англ. Hurricane Katrina) — самый разрушительный ураган в истории США. Это был ураган 5 категории по шкале ураганов Саффира-Симпсона, шестой по силе ураган Атлантического бассейна за всю историю наблюдений. Произошёл в конце августа 2005 года. Наиболее тяжёлый ущерб был причинён Новому Орлеану в Луизиане, где под водой оказалось около 80 % площади города. В результате стихийного бедствия погибли 1836 жителей, экономический ущерб составил $125 млрд (оценка, 2007)</dbo:abstract>
+    <dbo:abstract xml:lang="ar">إعصار كاترينا أكثر الأعاصير دموية والأكثر ضرراً من كل الأعاصير المدارية في المحيط الأطلسي خلال موسم الأعاصير في عام 2005، وهذه الكارثة الطبيعية هي الأكثر تكلفة، ويعتبر أحد أعنف خمسة أعاصير في تاريخ الولايات المتحدة الأمريكية، ويعتبر سابع أكبر أعاصير البحر المتوسط على الإطلاق. وقد بلغ عدد الوفيات من الأعاصير التي ضربت الولايات المتحدة في عام 2005 ميلادي حوالي 1833 قتيل، مما يجعلها أكثر الأعاصير فتكاً في تاريخ الولايات المتحدة الأمريكية منذ عام 1928 ميلادي. وقد تم تقدير الخسائر المالية بأكثر من 108 مليار دولار أمريكي، وهو ما يقارب أربعة أضعاف خسائر إعصار أندرو في عام 1992. كل الأعاصير تنشأ في البحر ثم تضمحل قوتها بعد وصولها إلى اليابسة. في البداية وصل إعصار كاترينا ولاية فلوريدا كاعصار من الدرجة الأولى في 28 آب 2005. بعد عبوره ولاية فلوريدا ازدادت قوة كاترينا لتصل إلى درجة 5 بريح سرعتها 175 ميل بالساعة(280 كم/ساعه). لكن شدة الإعصار هبطت إلى 125 ميل/ساعة عند وصوله إلى ولاية لويزيانا.</dbo:abstract>
+    <dbo:abstract xml:lang="es">El huracán Katrina fue el más destructivo y el que causó más víctimas mortales de la temporada de huracanes en el Atlántico de 2005. Se trata del huracán que ha provocado más daños económicos, así como uno de los cinco huracanes más mortíferos, de la historia de Estados Unidos.  Asimismo, el Katrina es el sexto más intenso de todos los huracanes del Atlántico registrados. Al menos 1833 personas fallecieron debido al propio huracán o las consiguientes inundaciones, convirtiéndose en el huracán más mortífero en Estados Unidos desde el huracán San Felipe II, de 1928; la cifra total de daños materiales se estimó en un principio en 108 mil millones de dólares (2005 USD), casi el cuádruple que la de los desperfectos causados por el huracán Andrew en 1992.El 23 de agosto de 2005 el huracán Katrina se formó sobre las Bahamas y cruzó el sur de Florida como un huracán de categoría 1 moderado, causando algunas muertes e inundaciones antes de fortalecerse rápidamente en el golfo de México. Tras haber alcanzado la categoría 5, la tormenta se debilitó antes de tocar tierra por segunda vez como un huracán de categoría 3 el 29 de agosto en el sudeste de Luisiana. El Katrina devastó las costas del golfo desde Florida a Texas debido a su intensificación. El mayor número de muertes se registró en Nueva Orleans, que quedó inundada porque su sistema de diques falló, colapsándose muchos de ellos varias horas después de que el huracán hubiese continuado tierra adentro. El 80% de la ciudad así como grandes superficies de parroquias colindantes quedaron anegadas, manteniéndose así durante semanas. Sin embargo, los daños materiales más importantes se produjeron en áreas costeras, como la inundación en cuestión de horas de todas las ciudades costeras de Misisipi, el arrastre de numerosos barcos y casinos flotantes a tierra firme, lo que provocó su choque con edificios, alcanzando las olas distancias de 10 a 19 km desde la costa.El fallo de las protecciones de Nueva Orleans es considerado como el mayor desastre de ingeniería civil de la historia de Estados Unidos y dio lugar a una demanda contra el Cuerpo de Ingenieros del Ejército de los Estados Unidos, que diseñó y construyó el sistema de diques, en virtud de la Flood Control Act de 1965. El Cuerpo de Ingenieros fue encontrado responsable del fallo de los diques y de las inundaciones por el juez Stanwood Duval en enero de 2008, pero al tratarse de una agencia federal no pudo ser declarada responsable económica debido a la inmunidad establecida por la Flood Control Act de 1928. Del mismo modo, se llevó a cabo una investigación sobre la actuación de los gobiernos federal, estatal y local, lo que desembocó en la dimisión de Michael D. Brown, director de la Agencia Federal para la Gestión de Emergencias (FEMA, por sus siglas inglés), y de Eddie Compass, superintendente del Departamento de Policía de Nueva Orleans.Varias agencias como la Guardia Costera de Estados Unidos, el Centro Nacional de Huracanes (CNH) y el Servicio Meteorológico Nacional fueron elogiados por su actuación, para la cual contaron con precisas previsiones meteorológicas con suficiente tiempo de antelación. Sin embargo, incluso los más insistentes avisos por parte de oficiales de distintos cuerpos a los habitantes para evacuar la zona antes de que llegara el huracán no reflejaban la posibilidad de que los diques pudieran ceder.Como consecuencia de los importantes daños económicos, materiales y personales dejados a lo largo de la costa del golfo, el nombre Katrina fue oficialmente retirado de la nómina por la Organización Meteorológica Mundial a petición del gobierno de Estados Unidos, de manera que nunca volverá a ser usado para designar un huracán del Atlántico norte. Katia fue el nombre elegido para reemplazarlo en la lista III de dicha nómina, que se usaría por primera vez en 2011.</dbo:abstract>
+    <dbo:abstract xml:lang="it">L&#39;uragano Katrina è stato uno tra i cinque uragani più gravi della storia degli Stati Uniti, il più grave in termini di danni economici e uno dei più gravi dal punto di vista del numero di morti. È stato il sesto uragano atlantico più forte mai registrato e il terzo più forte che abbia mai raggiunto le coste degli Stati Uniti. Katrina si è formato il 23 agosto durante la stagione degli uragani atlantici 2005 ed ha causato devastazioni lungo buona parte della regione che comprende gli stati confinanti con il Golfo del Messico, cioè la Costa del Golfo degli Stati Uniti. Le maggiori perdite di vite e di danni alle infrastrutture sono avvenuti a New Orleans, in Louisiana, che è stata inondata quando il sistema di argini si è rivelato catastroficamente inutile, in molti casi ore dopo che la tempesta si è spostata verso l&#39;interno. L&#39;uragano ha causato gravi distruzioni attraverso l&#39;intera costa del Mississippi e in Alabama, fino a 160 km dal centro della tempesta.Katrina è stata l&#39;undicesima tempesta tropicale, il quinto uragano, il terzo uragano maggiore e il secondo uragano categoria 5 della stagione degli uragani atlantici 2005.Si è formato sopra le Bahamas il 23 agosto 2005, ed ha attraversato il sud della Florida come moderato uragano di categoria 1, causando alcuni morti ed allagamenti in quei luoghi prima di rafforzarsi rapidamente nel Golfo del Messico e diventando uno dei più forti uragani mai registrati in mare. La tempesta si è indebolita prima di addentrarsi come tempesta di categoria 3 il mattino del 29 agosto prima nel sud della Louisiana e poi al confine di stato tra Louisiana e Mississippi.L&#39;aumento del livello delle acque causato dall&#39;onda di tempesta ha causato gravi danni lungo la Costa del Golfo degli Stati Uniti, devastando le città del Mississippi Waveland, Bay St. Louis, Pass Christian, Long Beach, Gulfport, Biloxi, Ocean Springs e Pascagoula. In Louisiana, il sistema di prevenzione delle inondazioni non ha funzionato in più di 50 punti differenti. In quasi tutti gli argini dell&#39;area metropolitana di New Orleans si sono create delle brecce non appena l&#39;uragano Katrina è passato ad est della città, inondando conseguentemente l&#39;80% dell&#39;area metropolitana e molte aree delle vicine parrocchie per settimane.Almeno 1 836 persone hanno perso la vita a causa dell&#39;uragano Katrina e per i conseguenti allagamenti causati, rendendolo il più grave negli Stati Uniti dal punto di vista del numero dei morti dopo l&#39;uragano Okeechobee del 1928. Si stima che la tempesta abbia causato danni per 81,2 miliardi di dollari, diventando il più grave disastro naturale della storia degli Stati Uniti in termini economici. Il catastrofico fallimento della protezione contro le inondazioni a New Orleans ha portato a rivedere l&#39;organigramma del corpo degli ingegneri dell&#39;esercito, poiché questa agenzia era l&#39;unica, per mandato del Congresso, ad avere la responsabilità della progettazione e della realizzazione del sistema di protezione.Diffuse sono state anche le critiche alla reazione dei governi federale, statali e locali, che hanno portato ad una investigazione da parte del Congresso degli Stati Uniti ed alle dimissioni di Michael D. Brown, direttore della Federal Emergency Management Agency. Al contrario, il National Hurricane Center e il National Weather Service sono stati largamente encomiati per le loro previsioni accurate.</dbo:abstract>
+    <dbo:abstract xml:lang="ja">ハリケーン・カトリーナ (Hurricane Katrina) は、2005年8月末にアメリカ合衆国南東部を襲った大型のハリケーンである。ハリケーンの強さを表すシンプソン・スケールで、最大時で最高のカテゴリー5、ルイジアナ州上陸時でカテゴリー3である。時間は全てアメリカ合衆国・カナダ中部夏時間、（UTC-5）である。</dbo:abstract>
+    <dbp:imageLocation rdf:datatype="http://www.w3.org/2001/XMLSchema#gMonthDay">--08-28</dbp:imageLocation>
+    <dbp:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">902</dbp:pressure>
+    <!--
+    <p: xmlns:p="http://dbpedia.org/property/1MinWinds" rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</p:>
+    -->
+    <dbp:areas xml:lang="en">Bahamas, South Florida, Cuba, Louisiana , Mississippi, Alabama, Florida Panhandle, most of eastern North America</dbp:areas>
+    <dbp:basin xml:lang="en">Atl</dbp:basin>
+    <dbp:damages rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108000</dbp:damages>
+    <dbp:damagespost xml:lang="en">Costliest on record</dbp:damagespost>
+    <dbp:dissipated rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-08-31</dbp:dissipated>
+    <dbp:extratropical rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2005-08-30</dbp:extratropical>
+    <dbp:hurricaneSeason rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</dbp:hurricaneSeason>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Katrina">
+    <dbo:wikiPageDisambiguates rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Zeitoun_(book)">
+    <dbp:subject rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+    <dbo:nonFictionSubject rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/1138th_Military_Police_Company">
+    <dbp:battles rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+    <dbo:battle rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Carrot_Top">
+    <dbp:subject rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Camille">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/New_Orleans">
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/A.D.:_New_Orleans_After_the_Deluge">
+    <dbp:subject rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+    <dbo:nonFictionSubject rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Effects_of_Hurricane_Katrina_in_Florida">
+    <dbp:name rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricanekatrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katrina_(2005)">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katrina_(contents)">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katrina_(lists)">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tropical_Depression_Twelve_(2005)">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/12L.KATRINA">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/12L.Katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2005_Florida-Louisiana-Mississippi_hurricane">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2005_Hurricane_Katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/2005_Katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/H_katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Huricaine_Katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Huricane_Katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katarina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katrina_2005">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katrina_disaster">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katrina_on_New_Orleans">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Kutrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_katina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_«Katrina»">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricanes_Katrina_and_Rita">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Katrina_2005">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Katrina_Hurricane">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Katrina_Storm">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Storm_Katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Tropical_Storm_Katrina_(2005)">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Typhoon_Katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/The_Lampshade:_A_Holocaust_Detective_Story_from_Buchenwald_to_New_Orleans">
+    <dbo:nonFictionSubject rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurrican_Katrina">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Hurricane_Katrina_and_technology">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://dbpedia.org/resource/Katrina_(hurricane)">
+    <dbo:wikiPageRedirects rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://en.wikipedia.org/wiki/Hurricane_Katrina">
+    <foaf:primaryTopic rdf:resource="http://dbpedia.org/resource/Hurricane_Katrina" />
+  </rdf:Description>
+</rdf:RDF>
