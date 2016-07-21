@@ -45,11 +45,11 @@ public class App {
                     String processed = NERProcessing.process(stmt.getObject().toString());
                     Set<String> locations = getLocations(processed);
                     System.out.println("Locations: " + locations);
-                    ArrayList<String> adminCodes = new ArrayList<String>();
+                    ArrayList<Location> adminCodes = new ArrayList<Location>();
                     for(String location : locations){
-                        adminCodes.add(GeonamesUtils.getAdminName(location));
+                        adminCodes.add(GeonamesUtils.getData(location));
                     }
-                    System.out.println("Admin Codes: " + adminCodes);
+                    System.out.println("Full data: " + adminCodes);
                 }
             }
         }

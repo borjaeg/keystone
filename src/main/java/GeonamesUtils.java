@@ -1,14 +1,13 @@
 import org.geonames.*;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by b3j90 on 21/07/16.
  */
 public class GeonamesUtils {
 
-    public static String getAdminName(String location){
+    public static Location getData(String location){
         //First, must be registered on Geonames. Then, place the user here...
         WebService.setUserName("piraces");
 
@@ -16,7 +15,7 @@ public class GeonamesUtils {
         searchCriteria.setQ(location);
         searchCriteria.setStyle(Style.FULL);
         ToponymSearchResult searchResult;
-        String adminCode1 = "";
+        Location location2 = new Location();
 
         try {
             /**for (Toponym toponym : searchResult.getToponyms()) {
@@ -25,11 +24,13 @@ public class GeonamesUtils {
              }**/
 
             searchResult = WebService.search(searchCriteria);
-            List<Toponym> toponym = searchResult.getToponyms();
-            adminCode1 = toponym.get(0).getAdminName1();
+            List<Toponym> toponyms = searchResult.getToponyms();
+            Toponym toponym = toponyms.get(0);
+            location2 = new Location(toponym.getCountryName(), toponym.getAdminName1(), toponym.getFeatureClassName());
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return adminCode1;
+        return location2;
+
     }
 }
