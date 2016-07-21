@@ -5,16 +5,18 @@ import org.apache.jena.util.FileManager;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  * Created by b3j90 on 21/07/16.
  */
 public class App {
 
-    public static ArrayList<String> getLocations(String input){
+    public static Set<String> getLocations(String input){
         Scanner scanner = new Scanner(input);
-        ArrayList<String> locations = new ArrayList<String>();
+        Set<String> locations = new HashSet<String>();
         while(scanner.hasNext()){
             String word = scanner.next();
             if(word.contains("<LOCATION>")){
@@ -23,6 +25,8 @@ public class App {
                     word = word + " " + scanner.next();
                 }
                 word = word.replace("</LOCATION>", "");
+                word = word.replace(".", "");
+                word = word.replace(",", "");
                 locations.add(word);
             }
         }
@@ -39,7 +43,13 @@ public class App {
                 // Silly Heuristic to filter english abstracts
                 if (stmt.getObject().toString().contains("hurricane")){
                     String processed = NERProcessing.process(stmt.getObject().toString());
-                    System.out.println(getLocations(processed));
+                    Set<String> locations = getLocations(processed);
+                    System.out.println("Locations: " + locations);
+                    ArrayList<String> adminCodes = new ArrayList<String>();
+                    for(String location : locations){
+                        adminCodes.add(GeonamesUtils.getAdminName(location));
+                    }
+                    System.out.println("Admin Codes: " + adminCodes);
                 }
             }
         }
