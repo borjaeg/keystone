@@ -1,5 +1,6 @@
 import org.geonames.*;
 
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -18,11 +19,14 @@ public class GeonamesUtils {
         String adminCode1 = "";
 
         try {
-            searchResult = WebService.search(searchCriteria);
-            for (Toponym toponym : searchResult.getToponyms()) {
-                adminCode1 = toponym.getAdminName1();
-            }
+            /**for (Toponym toponym : searchResult.getToponyms()) {
+             adminCode1 = toponym.getAdminName1();
+             break;
+             }**/
 
+            searchResult = WebService.search(searchCriteria);
+            List<Toponym> toponym = searchResult.getToponyms();
+            adminCode1 = toponym.get(0).getAdminName1();
         } catch (Exception e) {
             e.printStackTrace();
         }
