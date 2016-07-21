@@ -43,7 +43,13 @@ public class App {
                 // Silly Heuristic to filter english abstracts
                 if (stmt.getObject().toString().contains("hurricane")){
                     String processed = NERProcessing.process(stmt.getObject().toString());
-                    System.out.println(getLocations(processed));
+                    Set<String> locations = getLocations(processed);
+                    System.out.println("Locations: " + locations);
+                    ArrayList<String> adminCodes = new ArrayList<String>();
+                    for(String location : locations){
+                        adminCodes.add(GeonamesUtils.getAdminName(location));
+                    }
+                    System.out.println("Admin Codes: " + adminCodes);
                 }
             }
         }
