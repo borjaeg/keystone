@@ -3,18 +3,19 @@ $(document).ready(function() {
     var earth;
     var isMicrophoneActive = true;
 
-    function flyToJapan() {
+    function fly(lat, long) {
+        console.log(lat, long);
         earth.fitBounds([
-            [22, 122],
-            [48, 154]
+            [lat-5, long-5],
+            [lat+5, long+5]
         ]);
         earth.panInsideBounds([
-            [22, 122],
-            [48, 154]
+            [lat+5, long-5],
+            [lat+5, long-5]
         ], {
-            heading: 90,
+            heading: 60,
             tilt: 25,
-            duration: 1
+            duration: 2
         });
     }
 
@@ -60,6 +61,7 @@ $(document).ready(function() {
                 var path = "path?name=" + $("#keywords").val() + "&season=" + $("#season").val();
                 $.get(path, function(data) {
                     console.log(data);
+                    fly(data[0].lat, data[0].lon);
                     for (var i = 0; i < data.length; i++) {
                         var marker = WE.marker([data[i].lat, data[i].lon]).addTo(earth);
                         markers.push(marker);
@@ -84,6 +86,7 @@ $(document).ready(function() {
                             var path = "path?name=" + e.results[i][0].transcript + "&season=" + $("#season").val();
                             $.get(path, function(data) {
                                 console.log(data);
+                                fly(data[0].lat, data[0].lon);
                                 for (var i = 0; i < data.length; i++) {
                                     var marker = WE.marker([data[i].lat, data[i].lon]).addTo(earth);
                                     markers.push(marker);
