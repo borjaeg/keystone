@@ -14,12 +14,8 @@ public class DataRetriever {
 
 
     public static void main(String[] args){
-
         Hurricane a  = getHurricaneData("http://dbpedia.org/resource/Hurricane_Katrina");
-
-        System.out.println(a.abstract_);
-
-
+        System.out.println("Abstract: " + a.abstract_);
     }
 
 
@@ -123,7 +119,7 @@ public class DataRetriever {
         }
 
 
-        System.out.println("Obteniendo recursos para keywords: " + searchTerms);
+        System.out.println("Obtaining resources for keywords: " + searchTerms);
         String query = "select DISTINCT ?resource where \n" +
                 "{" +
                 " {" +

@@ -21,10 +21,14 @@ public class GeonamesUtils {
             searchResult = WebService.search(searchCriteria);
             List<Toponym> toponyms = searchResult.getToponyms();
             // Gets the first toponym in search (best match)
-            Toponym toponym = toponyms.get(0);
-            // Split feature class name to get the first class
-            location2 = new Location(toponym.getCountryName(), toponym.getAdminName1(),
-                    toponym.getFeatureClassName().split(",")[0]);
+            if(toponyms.size()>0) {
+                Toponym toponym = toponyms.get(0);
+                // Split feature class name to get the first class
+                location2 = new Location(toponym.getCountryName(), toponym.getAdminName1(),
+                        toponym.getFeatureClassName().split(",")[0]);
+            } else {
+                location2 = null;
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }

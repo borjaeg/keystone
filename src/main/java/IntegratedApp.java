@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 
 /**
@@ -8,10 +9,13 @@ import java.util.Set;
 public class IntegratedApp {
 
     public static void main(String[] args){
-
-        String[] keywords = new String[]{"katrina"};
-
-         List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(keywords);
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the hurricane name: ");
+        String name = input.nextLine();
+        System.out.print("Enter the hurricane year: ");
+        String year = input.nextLine();
+        String[] keywords = new String[]{name, year};
+        List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(keywords);
 
         for (Hurricane hurricane : hurricanes){
             System.out.println(hurricane.abstract_);
