@@ -17,16 +17,20 @@ public class DataRetriever {
 
         Hurricane a  = getHurricaneData("http://dbpedia.org/resource/Hurricane_Katrina");
 
-        System.out.println(a.abstract_);
+        List<Hurricane> list = getHurricanesForKeywords("katrina",2005);
 
+        for(Hurricane h:list){
+            System.out.println(h.abstract_);
+            System.out.println();
+        }
 
     }
 
 
 
-    public static List<Hurricane> getHurricanesForKeywords(String[] keywords){
+    public static List<Hurricane> getHurricanesForKeywords(String name, Integer season){
 
-        List<String> instanceURIs = lookupURIs(keywords);
+        List<String> instanceURIs = lookupURIs(name,season);
         List<Hurricane> hurricans = new ArrayList<Hurricane>();
 
         for(String uri: instanceURIs){
@@ -100,30 +104,10 @@ public class DataRetriever {
      * Devuelve array de instancias o recursos de dbpedia que tienen que ver
      * con el array de keywords pasadas.
      */
-    public static List<String> lookupURIs(String[] terminos){
+    public static List<String> lookupURIs(String name, Integer season){
 
 
-        String searchTerms = "";
-
-        for(int i = 0; i < terminos.length; i++){
-
-            if(i>0){
-                searchTerms += " AND";
-
-            }
-            boolean isNumber = NumberUtils.isNumber(terminos[i]);
-
-            if(isNumber){
-                searchTerms += " \"" + terminos[i] + "\"";
-            }
-            else{
-                searchTerms +=  terminos[i];
-            }
-
-        }
-
-
-        System.out.println("Obteniendo recursos para keywords: " + searchTerms);
+        System.out.println("Obteniendo recursos para nombre " + name + " y año " + season);
         String query = "select DISTINCT ?resource where \n" +
                 "{" +
                 " {" +
@@ -135,8 +119,13 @@ public class DataRetriever {
                 "            graph ?g" +
                 "            {" +
                 "              ?s1 ?s1textp ?o1 ." +
-                "              ?s1 a  <http://dbpedia.org/class/yago/Hurricane111467018> ." +
-                "              ?o1 bif:contains ' ( " + searchTerms  + "  ) ' option ( score ?sc ) ." +
+                "              ?s1 a  <http://dbpedia.org/class/yago/Hurricane111467018> .";
+
+                if(season!=null){
+                    query+=  "  ?s1 <http://dbpedia.org/property/hurricaneSeason> \"" + season + "\"^^xsd:integer.";
+                }
+
+               query+= "    ?o1 bif:contains ' ( " + name  + "  ) ' option ( score ?sc ) ." +
                 "            }" +
                 "           }" +
                 "         }" +
