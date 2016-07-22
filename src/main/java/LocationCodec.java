@@ -19,20 +19,29 @@ public class LocationCodec implements Codec<Location> {
         String name = reader.readString("name");
         String country = reader.readString("country");
         String type = reader.readString("type");
+        String original = reader.readString("original");
+        Double lat = reader.readDouble("lat");
+        Double lon = reader.readDouble("lon");
         reader.readEndDocument();
 
-        Location user = new Location(country, name, type);
+        Location user = new Location(original, country, name, type, lat, lon);
         return user;
     }
 
     public void encode(BsonWriter writer, Location user, EncoderContext encoderContext) {
         writer.writeStartDocument();
+        writer.writeName("original");
+        writer.writeString(user.getOriginal());
         writer.writeName("name");
         writer.writeString(user.getName());
         writer.writeName("country");
         writer.writeString(user.getCountry());
         writer.writeName("type");
         writer.writeString(user.getType());
+        writer.writeName("lat");
+        writer.writeDouble(user.getLat());
+        writer.writeName("lon");
+        writer.writeDouble(user.getLon());
         writer.writeEndDocument();
     }
 
