@@ -48,10 +48,12 @@ public class IntegratedApp {
                 } else {
                     MongoUtils.insert(name, null, adminCodes);
                 }
+                CSVUtils.writeCSV(name, Integer.parseInt(year), adminCodes);
                 break;
             }
         }
         long time2 = System.currentTimeMillis();
         System.out.println("Total time: " + ((time2-time1)/1000.0) + " s.");
+
     }
 }
