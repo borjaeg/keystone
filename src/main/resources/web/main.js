@@ -1,6 +1,19 @@
 $( document ).ready(function() {
+
+var earth;
+
+function flyToJapan() {
+        earth.fitBounds([[22, 122], [48, 154]]);
+        earth.panInsideBounds([[22, 122], [48, 154]],
+                            {heading: 90, tilt: 25, duration: 1});
+}
+
+$("#move").click(function(){
+ flyToJapan();
+});
+
         function initialize() {
-        var earth = new WE.map('earth_div');
+        earth = new WE.map('earth_div');
         earth.setView([46.8011, 8.2266], 2);
         /*WE.tileLayer('http://data.webglearth.com/natural-earth-color/{z}/{x}/{y}.jpg', {
           tileSize: 256,
@@ -31,6 +44,10 @@ $( document ).ready(function() {
             if (e.results[i].isFinal) {
                 textarea.value += e.results[i][0].transcript;
                 console.log(e.results[i][0].transcript);
+                var path = "path?name=" + e.results[i][0].transcript + "&season=2005";
+                $.get( path, function( data ) {
+                  console.log(data);
+                });
             }
         }
     }
@@ -41,4 +58,4 @@ $( document ).ready(function() {
     initialize();
 });
 
-    
+
