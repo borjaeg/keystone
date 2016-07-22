@@ -1,30 +1,31 @@
 <!DOCTYPE HTML>
 <html>
-  <head>
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" 
-  crossorigin="anonymous"></script>
-  <script src="main.js"></script>
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+            crossorigin="anonymous"></script>
+    <script src="main.js"></script>
     <script src="http://www.webglearth.com/v2/api.js"></script>
-    <link rel="stylesheet" type="text/css" href="main.css">
     <style type="text/css">
-      html, body{padding: 0; margin: 0;}
-      #earth_div{top: 0; right: 0; bottom: 0; left: 0;
-                   background-image: url("images/galaxy.jpg");
-      }
-      .speech {border: 1px solid #DDD; width: 450px; padding: 0; margin: 0}
-      .speech input {border: 0; width: 380px; display: inline-block; height: 30px;}
-      .speech img {float: right; width: 30px }
+        html, body{padding: 0; margin: 0;}
+        #earth_div{top: 0; right: 0; bottom: 0; left: 0;
+            background-image: url("images/galaxy.jpg");
+        }
+        .speech {border: 1px solid #DDD; width: 300px; padding: 0; margin: 0}
+        .speech input {border: 0; width: 240px; display: inline-block; height: 30px;}
+        .speech img {float: right; width: 40px }
     </style>
     <title>PoC 2nd Keystone Summer School</title>
-  </head>
-  <body>
-  <div style="background-color: #1B1D29;">
+</head>
+<body>
+<div style="background-color: #1B1D29;">
     <div class="speech">
-      <input type="text" name="q" id="keywords" placeholder="Search..." />
-      <img id="activateMicrophone" src="//i.imgur.com/cHidSVu.gif" />
+        <input type="text" name="q" id="keywords" placeholder="Type keywords..." />
+        <input type="number" name="s" id="season" value="2005" placeholder="Type a year or season..." />
+        <!--<img onclick="startDictation()" src="//i.imgur.com/cHidSVu.gif" />-->
+        <img id="activateMicrophone" src="//i.imgur.com/cHidSVu.gif" />
     </div>
     <br>
-    </div>
-    <div id="earth_div"></div>
-  </body>
+</div>
+<div id="earth_div"></div>
+</body>
 </html>

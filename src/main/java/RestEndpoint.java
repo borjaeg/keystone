@@ -1,4 +1,5 @@
 import com.google.gson.Gson;
+import com.google.gson.internal.Excluder;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -41,9 +42,9 @@ public class RestEndpoint {
 
                 }
                 if (param.equalsIgnoreCase("season")) {
-
-                    season = Integer.parseInt(req.queryParamsValues(param)[0]);
-
+                    try{
+                        season = Integer.parseInt(req.queryParamsValues(param)[0]);
+                    } catch(Exception ex){}
                 }
 
 
