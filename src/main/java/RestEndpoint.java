@@ -19,7 +19,11 @@ public class RestEndpoint {
 
     public static void main(String[] args) {
 
+        
+
+
         staticFileLocation("/web");
+
 
         before((request, response) -> response.type("application/json"));
 
@@ -65,7 +69,16 @@ public class RestEndpoint {
     }
 
 
-    public static Set<Location> calculate(String name, Integer year){
+    public static List<Location> calculate(String name, Integer year){
+
+        List<Location> result = MongoUtils.retrieve(name,year);
+        if(result!=null){
+            System.out.println("Already in mongo!");
+            return result;
+        }
+
+        System.out.println("Not in mongoDB... calculating");
+
         List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(name,year);
 
         Set<String> uniqueLocations = new HashSet<>();
@@ -84,7 +97,12 @@ public class RestEndpoint {
         for(String location: uniqueLocations){
                 adminCodes.add(GeonamesUtils.getData(location));
         }
-        return adminCodes;
+
+        result = new ArrayList<Location>();
+        result.addAll(adminCodes);
+
+        MongoUtils.insert(name,year,result);
+        return result;
     }
 
 }

@@ -8,6 +8,9 @@ import org.bson.codecs.configuration.CodecRegistries;
 import org.bson.codecs.configuration.CodecRegistry;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Set;
 
 import static com.mongodb.client.model.Filters.*;
 
@@ -28,7 +31,8 @@ public class MongoUtils {
         return collection;
     }
 
-    public static void insert(String keyword, String season, ArrayList<Location> locations){
+    public static void insert(String keyword, Integer season, List<Location> locations){
+
         Document doc = new Document("keyword", keyword)
                 .append("season", season)
                 .append("locations", locations);
@@ -36,10 +40,16 @@ public class MongoUtils {
         connect().insertOne(doc);
     }
 
-    public static ArrayList<Location> retrieve(String keyword, String season){
+    public static List<Location> retrieve(String keyword, Integer season){
         Document myDoc = connect().find(and(eq("keyword", keyword), eq("season", season))).first();
         try{
-            return (ArrayList<Location>) myDoc.get("locations");
+            Object o = myDoc.get("locations");
+            if(o!=null){
+                return (List<Location>) o;
+            }
+            else{
+                return null;
+            }
         } catch(Exception ex){
             return null;
         }
