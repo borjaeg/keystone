@@ -7,6 +7,7 @@ import java.util.Set;
 
 import static spark.Spark.before;
 import static spark.Spark.get;
+import static spark.Spark.staticFileLocation;
 
 /**
  * Created by ismaro3 on 22/07/16.
@@ -17,6 +18,8 @@ public class RestEndpoint {
     static Gson gson = new Gson();
 
     public static void main(String[] args) {
+
+        staticFileLocation("/web");
 
         before((request, response) -> response.type("application/json"));
 
