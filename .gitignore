@@ -12,7 +12,7 @@
 .idea/dictionaries
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
-
+*.iml
 # Sensitive or high-churn files:
 .idea/dataSources.ids
 .idea/dataSources.xml
@@ -21,6 +21,10 @@
 .idea/dynamic.xml
 .idea/uiDesigner.xml
 
+target/
+target/classes
+target/generated-sources
+.idea/
 # Gradle:
 .idea/gradle.xml
 .idea/libraries
