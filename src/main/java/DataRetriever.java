@@ -17,10 +17,10 @@ public class DataRetriever {
         Hurricane a  = getHurricaneData("http://dbpedia.org/resource/Hurricane_Katrina");
 
 
-        List<Hurricane> list = getHurricanesForKeywords("katrina",2005);
+        List<Hurricane> list = getHurricanesForKeywords("katrina",null);
 
         for(Hurricane h:list){
-            System.out.println(h.abstract_);
+            System.out.println(h.season);
             System.out.println();
         }
 
@@ -46,11 +46,15 @@ public class DataRetriever {
      */
     public static Hurricane getHurricaneData(String instanceURI){
 
-        String query = "select ?abstract ?areas" +
+
+        String query = "select ?abstract ?areas ?season ?label" +
                 "{" +
                   "<" + instanceURI + "> <http://dbpedia.org/ontology/abstract> ?abstract ." +
                   "<" + instanceURI + "> <http://dbpedia.org/property/areas> ?areas ." +
+                "<" + instanceURI + "> <http://dbpedia.org/property/hurricaneSeason> ?season ." +
+                "<" + instanceURI + "> <http://www.w3.org/2000/01/rdf-schema#label> ?label ." +
                   "FILTER (lang(?abstract) = 'en')" +
+                 "FILTER (lang(?label) = 'en')" +
                 "}";
 
         Hurricane hurricane = new Hurricane();
@@ -78,6 +82,21 @@ public class DataRetriever {
 
                 if(terms.length>1){
                     hurricane.areas = terms[1];
+                }
+
+                if(terms.length>2 && terms[2].length()>0){
+
+                    try{
+                        hurricane.season = Integer.parseInt(terms[2]);
+                    }
+                    catch(Exception ex){
+                        hurricane.season = null;
+                    }
+
+                }
+
+                if(terms.length>3){
+                    hurricane.label = terms[3].substring(1,terms[3].length()-1);
                 }
 
 

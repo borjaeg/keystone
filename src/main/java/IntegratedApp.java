@@ -8,6 +8,8 @@ import java.util.Set;
  */
 public class IntegratedApp {
 
+    static MongoUtils mongo = new MongoUtils();
+
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the hurricane name: ");
@@ -18,9 +20,9 @@ public class IntegratedApp {
         List<Location> retrieved;
         // Checks MongoDB cache
         if(year.length()>0) {
-            retrieved = MongoUtils.retrieve(name, Integer.parseInt(year));
+            retrieved = mongo.retrieve(name, Integer.parseInt(year));
         } else {
-            retrieved = MongoUtils.retrieve(name, null);
+            retrieved = mongo.retrieve(name, null);
         }
         if(retrieved != null){
             System.out.println(retrieved);
@@ -44,9 +46,9 @@ public class IntegratedApp {
                 System.out.println("Full data: " + adminCodes);
                 // Inserts in MongoDB cache
                 if(year.length()>0) {
-                    MongoUtils.insert(name, Integer.parseInt(year), adminCodes);
+                    mongo.insert(name, Integer.parseInt(year), adminCodes);
                 } else {
-                    MongoUtils.insert(name, null, adminCodes);
+                    mongo.insert(name, null, adminCodes);
                 }
                 CSVUtils.writeCSV(name, Integer.parseInt(year), adminCodes);
                 break;

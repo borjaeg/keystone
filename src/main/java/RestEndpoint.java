@@ -16,10 +16,12 @@ public class RestEndpoint {
 
     static NERProcessing nerp = new NERProcessing();
     static Gson gson = new Gson();
+    static MongoUtils mongo = new MongoUtils();
 
     public static void main(String[] args) {
 
         
+
 
 
         staticFileLocation("/web");
@@ -71,7 +73,7 @@ public class RestEndpoint {
 
     public static List<Location> calculate(String name, Integer year){
 
-        ArrayList<Location> result = MongoUtils.retrieve(name,year);
+        ArrayList<Location> result = mongo.retrieve(name,year);
         if(result!=null){
             System.out.println("Already in mongo!");
             return result;
@@ -101,7 +103,7 @@ public class RestEndpoint {
         result = new ArrayList<Location>();
         result.addAll(adminCodes);
 
-        MongoUtils.insert(name,year,result);
+        mongo.insert(name,year,result);
         return result;
     }
 

@@ -16,7 +16,18 @@ import static com.mongodb.client.model.Filters.*;
  */
 public class MongoUtils {
 
-    public static MongoCollection<Document> connect(String col){
+
+
+
+    public MongoCollection<Document> queriesCol;
+    public MongoCollection<Document> geonamesCol;
+
+
+    public MongoUtils(){
+        queriesCol = connect("queries");
+        geonamesCol = connect("geonames");
+    }
+    public  MongoCollection<Document> connect(String col){
         CodecRegistry codecRegistry = CodecRegistries.fromRegistries(
                 CodecRegistries.fromProviders(new LocationCodecProvider()),
                 MongoClient.getDefaultCodecRegistry());
@@ -28,16 +39,17 @@ public class MongoUtils {
         return collection;
     }
 
-    public static void insert(String keyword, Integer season, ArrayList<Location> locations){
+    public  void insert(String keyword, Integer season, ArrayList<Location> locations){
         Document doc = new Document("keyword", keyword)
                 .append("season", season)
                 .append("locations", locations);
 
-        connect("queries").insertOne(doc);
+        queriesCol.insertOne(doc);
+
     }
 
-    public static ArrayList<Location> retrieve(String keyword, Integer season){
-        Document myDoc = connect("queries").find(and(eq("keyword", keyword), eq("season", season))).first();
+    public  ArrayList<Location> retrieve(String keyword, Integer season){
+        Document myDoc = queriesCol.find(and(eq("keyword", keyword), eq("season", season))).first();
         try{
             return (ArrayList<Location>) myDoc.get("locations");
         } catch(Exception ex){
@@ -46,18 +58,18 @@ public class MongoUtils {
 
     }
 
-    public static void insertGeonames(Location location){
+    public  void insertGeonames(Location location){
         Document doc = new Document("name", location.getName())
                 .append("country", location.getCountry())
                 .append("type", location.getType())
                 .append("original", location.getOriginal())
                 .append("lat", location.getLat())
                 .append("lon", location.getLon());
-        connect("geonames").insertOne(doc);
+        geonamesCol.insertOne(doc);
     }
 
-    public static ArrayList<String> retrieveGeonames(String keyword){
-        Document myDoc = connect("geonames").find(eq("original", keyword)).first();
+    public  ArrayList<String> retrieveGeonames(String keyword){
+        Document myDoc = geonamesCol.find(eq("original", keyword)).first();
         try{
             ArrayList<String> result = new ArrayList<String>();
             result.add(myDoc.getString("country"));
