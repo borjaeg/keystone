@@ -35,13 +35,22 @@ $(document).ready(function() {
         }).addTo(earth);*/
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
 
+
+
         // voice recognition
         var recognition = new webkitSpeechRecognition();
         recognition.continuous = true;
         recognition.interimResults = true;
-        $('activateMicrophone').click(function() {
-            if (isMicrophoneActive) isMicrophoneActive = false;
-            else isMicrophoneActive = true;
+        $('.speech').click(function() {
+            if (isMicrophoneActive){
+                recognition.stop();
+                $(this).toggleClass('saturate');
+                isMicrophoneActive = false;
+            }
+            else {
+                recognition.start();
+                isMicrophoneActive = true;
+            }
         });
 
         var markers = [];
@@ -65,7 +74,6 @@ $(document).ready(function() {
         });
 
         recognition.onresult = function(e) {
-                if (isMicrophoneActive) {
                     for (var i = 0; i < markers.length; i++)
                         earth.removeMarker(markers[i]);
                     var textarea = document.getElementById('keywords');
@@ -88,7 +96,6 @@ $(document).ready(function() {
                             });
                         }
                     }
-                }
             }
             // start listening
         recognition.start();
