@@ -8,7 +8,7 @@ import java.util.List;
 public class GeonamesUtils {
 
     public static Location getData(String location){
-        //First, must be registered on Geonames. Then, place the user here...
+        // User enabled for consulting the Geonames API
         WebService.setUserName("piraces");
 
         ToponymSearchCriteria searchCriteria = new ToponymSearchCriteria();
@@ -18,15 +18,13 @@ public class GeonamesUtils {
         Location location2 = new Location();
 
         try {
-            /**for (Toponym toponym : searchResult.getToponyms()) {
-             adminCode1 = toponym.getAdminName1();
-             break;
-             }**/
-
             searchResult = WebService.search(searchCriteria);
             List<Toponym> toponyms = searchResult.getToponyms();
+            // Gets the first toponym in search (best match)
             Toponym toponym = toponyms.get(0);
-            location2 = new Location(toponym.getCountryName(), toponym.getAdminName1(), toponym.getFeatureClassName());
+            // Split feature class name to get the first class
+            location2 = new Location(toponym.getCountryName(), toponym.getAdminName1(),
+                    toponym.getFeatureClassName().split(",")[0]);
         } catch (Exception e) {
             e.printStackTrace();
         }
