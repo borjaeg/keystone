@@ -8,7 +8,7 @@ public class NERProcessing {
     public static String process(String abstracts) {
         String serializedClassifier = "stanford-ner/classifiers/english.all.3class.distsim.crf.ser.gz";
         classifier = CRFClassifier.getClassifierNoExceptions(serializedClassifier);
-        // System.out.println(classifier.classifyToString(abstracts));
+
         return classifier.classifyWithInlineXML(abstracts);
     }
 }

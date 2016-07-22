@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-         function initialize() {
+        function initialize() {
         var earth = new WE.map('earth_div');
         earth.setView([46.8011, 8.2266], 2);
         /*WE.tileLayer('http://data.webglearth.com/natural-earth-color/{z}/{x}/{y}.jpg', {
@@ -26,6 +26,7 @@ $( document ).ready(function() {
  
     recognition.onresult = function (e) {
         var textarea = document.getElementById('keywords');
+        textarea.value = "";
         for (var i = e.resultIndex; i < e.results.length; ++i) {
             if (e.results[i].isFinal) {
                 textarea.value += e.results[i][0].transcript;
