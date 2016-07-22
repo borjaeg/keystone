@@ -8,8 +8,10 @@ import java.util.List;
  */
 public class GeonamesUtils {
 
+    static MongoUtils mongo = new MongoUtils();
+
     public static Location getData(String location){
-        ArrayList<String> retrieved = MongoUtils.retrieveGeonames(location);
+        ArrayList<String> retrieved = mongo.retrieveGeonames(location);
         if(retrieved != null){
             return new Location(location, retrieved.get(0), retrieved.get(1), retrieved.get(2),
                     new Double(retrieved.get(3)), new Double(retrieved.get(4)));
@@ -38,7 +40,7 @@ public class GeonamesUtils {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            MongoUtils.insertGeonames(location2);
+            mongo.insertGeonames(location2);
             return location2;
         }
     }
