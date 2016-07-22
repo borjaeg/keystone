@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * Created by b3j90 on 21/07/16.
  */
-public class App {
+public class Utils {
 
     public static Set<String> getLocations(String input){
         Scanner scanner = new Scanner(input);
@@ -32,27 +32,4 @@ public class App {
         }
         return locations;
     }
-
-
-    public static void main(String[] args) {
-        Model m = FileManager.get().loadModel("Hurricane_Katrina.rdf");
-        StmtIterator it =  m.listStatements();
-        while (it.hasNext()) {
-            Statement stmt = it.next();
-            if (stmt.getPredicate().toString().equals("http://dbpedia.org/ontology/abstract")){
-                // Silly Heuristic to filter english abstracts
-                if (stmt.getObject().toString().contains("hurricane")){
-                    String processed = NERProcessing.process(stmt.getObject().toString());
-                    Set<String> locations = getLocations(processed);
-                    System.out.println("Locations: " + locations);
-                    ArrayList<String> adminCodes = new ArrayList<String>();
-                    for(String location : locations){
-                        adminCodes.add(GeonamesUtils.getAdminName(location));
-                    }
-                    System.out.println("Admin Codes: " + adminCodes);
-                }
-            }
-        }
-    }
-
 }

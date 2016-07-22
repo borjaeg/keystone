@@ -14,8 +14,8 @@ public class DataRetriever {
 
 
     public static void main(String[] args){
-
         Hurricane a  = getHurricaneData("http://dbpedia.org/resource/Hurricane_Katrina");
+
 
         List<Hurricane> list = getHurricanesForKeywords("katrina",2005);
 
@@ -107,7 +107,10 @@ public class DataRetriever {
     public static List<String> lookupURIs(String name, Integer season){
 
 
+
         System.out.println("Obteniendo recursos para nombre " + name + " y año " + season);
+
+
         String query = "select DISTINCT ?resource where \n" +
                 "{" +
                 " {" +

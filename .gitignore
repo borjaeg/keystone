@@ -57,3 +57,4 @@ fabric.properties
 
 # *.iml
 # modules.xml
+target/generated-sources/
