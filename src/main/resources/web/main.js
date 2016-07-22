@@ -46,8 +46,10 @@ $("#move").click(function(){
                 console.log(e.results[i][0].transcript);
                 var path = "path?name=" + e.results[i][0].transcript + "&season=2005";
                 $.get( path, function( data ) {
+                    console.log(data);
                   for (var i = 0; i < data.length; i++){
                     var marker = WE.marker([data[i].lat, data[i].lon]).addTo(earth);
+                    marker.bindPopup("<b>"+ data[i].name +"</b>", {maxWidth: 150, closeButton: true});
                   }
                 });
             }
