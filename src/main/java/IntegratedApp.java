@@ -2,6 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 
 /**
  * Created by b3j90 on 21/07/16.
@@ -11,6 +15,8 @@ public class IntegratedApp {
     static MongoUtils mongo = new MongoUtils();
 
     public static void main(String[] args){
+        Logger mongoLogger = Logger.getLogger( "com.mongodb" );
+        mongoLogger.setLevel(Level.SEVERE);
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the hurricane name: ");
         String name = input.nextLine().toLowerCase().trim();
@@ -50,7 +56,7 @@ public class IntegratedApp {
                 } else {
                     mongo.insert(name, null, adminCodes);
                 }
-                CSVUtils.writeCSV(name, Integer.parseInt(year), adminCodes);
+                CSVUtils.writeCSV(hurricane.label, hurricane.season, adminCodes);
                 break;
             }
         }

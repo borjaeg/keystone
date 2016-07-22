@@ -15,9 +15,11 @@ public class CSVUtils {
             String[] entries = {"stormname", "season", "country", "name_1", "type_1"};
             writer.writeNext(entries);
             for(Location location : locations){
-                String[] entries2 = {name, season.toString(), location.getCountry(), location.getName(),
-                        location.getType()};
-                writer.writeNext(entries2);
+                if(location!=null) {
+                    String[] entries2 = {name, season.toString(), location.getCountry(), location.getName(),
+                            location.getType()};
+                    writer.writeNext(entries2);
+                }
             }
             writer.close();
         } catch(Exception ex){

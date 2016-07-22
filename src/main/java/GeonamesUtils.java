@@ -31,16 +31,23 @@ public class GeonamesUtils {
                 // Gets the first toponym in search (best match)
                 if (toponyms.size() > 0) {
                     Toponym toponym = toponyms.get(0);
-                    // Split feature class name to get the first class
-                    location2 = new Location(location, toponym.getCountryName(), toponym.getAdminName1(),
-                            toponym.getFeatureClassName().split(",")[0], toponym.getLatitude(), toponym.getLongitude());
+                    if(toponym.getAdminName1() != null && toponym.getAdminName1().length()>1) {
+                        // Split feature class name to get the first class
+                        location2 = new Location(location, toponym.getCountryName(), toponym.getAdminName1(),
+                                toponym.getFeatureClassName(), toponym.getLatitude(),
+                                toponym.getLongitude());
+                    } else {
+                        location2 = null;
+                    }
                 } else {
                     location2 = null;
                 }
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            mongo.insertGeonames(location2);
+            if(location2!=null) {
+                mongo.insertGeonames(location2);
+            }
             return location2;
         }
     }
