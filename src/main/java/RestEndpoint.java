@@ -19,7 +19,11 @@ public class RestEndpoint {
 
     public static void main(String[] args) {
 
-        staticFileLocation( "/web" );
+        us
+                
+
+        staticFileLocation("/web");
+
 
         before((request, response) -> response.type("application/json"));
 
