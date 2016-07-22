@@ -3,14 +3,16 @@
  */
 public class Location {
 
+    String original;
     String country;
     String name;
     String type;
 
-    public Location(String country, String name, String type){
+    public Location(String original, String country, String name, String type){
         this.country = country;
         this.name = name;
         this.type = type;
+        this.original = original;
     }
 
     public Location(){}
@@ -39,10 +41,19 @@ public class Location {
         this.type = type;
     }
 
+    public String getOriginal() {
+        return original;
+    }
+
+    public void setOriginal(String original) {
+        this.original = original;
+    }
+
     @Override
     public String toString() {
         return "Location{" +
-                "country='" + country + '\'' +
+                "original='" + original + '\'' +
+                ", country='" + country + '\'' +
                 ", name='" + name + '\'' +
                 ", type='" + type + '\'' +
                 '}';
@@ -70,3 +81,4 @@ public class Location {
         return result;
     }
 }
+

@@ -71,7 +71,7 @@ public class RestEndpoint {
 
     public static List<Location> calculate(String name, Integer year){
 
-        List<Location> result = MongoUtils.retrieve(name,year);
+        ArrayList<Location> result = MongoUtils.retrieve(name,year);
         if(result!=null){
             System.out.println("Already in mongo!");
             return result;
