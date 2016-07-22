@@ -1,6 +1,7 @@
 $( document ).ready(function() {
 
 var earth;
+var isMicrophoneActive = true;
 
 function flyToJapan() {
         earth.fitBounds([[22, 122], [48, 154]]);
@@ -24,20 +25,35 @@ $("#move").click(function(){
           tms: true
         }).addTo(earth);*/
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
-        /*var marker = WE.marker([51.5, -0.09]).addTo(earth);
-        marker.bindPopup("<b>Hello world!</b><br>I am a popup.<br /><span style='font-size:10px;color:#999'>Tip: Another popup is hidden in Cairo..</span>", {maxWidth: 150, closeButton: true}).openPopup();
-
-        var marker2 = WE.marker([30.058056, 31.228889]).addTo(earth);
-        marker2.bindPopup("<b>Cairo</b><br>Yay, you found me!", {maxWidth: 120, closeButton: false});
-
-        var markerCustom = WE.marker([50, -9], '/img/logo-webglearth-white-100.png', 100, 24).addTo(earth);*/
 
         // voice recognition
     var recognition = new webkitSpeechRecognition();
     recognition.continuous = true;
     recognition.interimResults = true;
+    $('activateMicrophone').click(function(){
+       if (isMicrophoneActive) isMicrophoneActive = false;
+       else isMicrophoneActive = true;
+    });
+
+var markers = [];
+$("input").on("keydown",function search(e) {
+    if(e.keyCode == 13) {
+        markers = [];
+        var path = "path?name=" + $("input").val() + "&season=2005";
+                        $.get( path, function( data ) {
+                            console.log(data);
+                          for (var i = 0; i < data.length; i++){
+                            var marker = WE.marker([data[i].lat, data[i].lon]).addTo(earth);
+                            markers.push(marker);
+                            marker.bindPopup("<b>"+ data[i].name +"</b>", {maxWidth: 150, closeButton: true});
+                          }
+                        });
+    }
+});
  
     recognition.onresult = function (e) {
+        if (isMicrophoneActive){
+        markers = [];
         var textarea = document.getElementById('keywords');
         textarea.value = "";
         for (var i = e.resultIndex; i < e.results.length; ++i) {
@@ -49,11 +65,13 @@ $("#move").click(function(){
                     console.log(data);
                   for (var i = 0; i < data.length; i++){
                     var marker = WE.marker([data[i].lat, data[i].lon]).addTo(earth);
+                    markers.push(marker);
                     marker.bindPopup("<b>"+ data[i].name +"</b>", {maxWidth: 150, closeButton: true});
                   }
                 });
             }
         }
+      }
     }
     // start listening
         recognition.start();
