@@ -1,8 +1,11 @@
+import com.google.gson.Gson;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static spark.Spark.before;
 import static spark.Spark.get;
 
 /**
@@ -11,8 +14,12 @@ import static spark.Spark.get;
 public class RestEndpoint {
 
     static NERProcessing nerp = new NERProcessing();
+    static Gson gson = new Gson();
 
     public static void main(String[] args) {
+
+        before((request, response) -> response.type("application/json"));
+
         get("/path", (req, res) -> {
             Set<String> params = req.queryParams();
             String name ="";
@@ -40,7 +47,7 @@ public class RestEndpoint {
                 return "Error, please add at least name";
             }
             else{
-                return calculate(name,season);
+                return gson.toJson(calculate(name,season));
 
 
                // return DataRetriever.getHurricanesForKeywords(new String[]{name,season});
@@ -55,12 +62,12 @@ public class RestEndpoint {
     }
 
 
-    public static ArrayList<Location> calculate(String name, Integer year){
+    public static Set<Location> calculate(String name, Integer year){
         List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(name,year);
 
         Set<String> uniqueLocations = new HashSet<>();
 
-        for (Hurricane hurricane : hurricanes){
+        for (Hurricane hurricane : hurricanes){ //De cada huracán, obtenemos sus localizaciones en texto.
 
             String processed = nerp.process(hurricane.abstract_);   //Extract processed text
             Set<String> locations = Utils.getLocations(processed);
@@ -70,9 +77,8 @@ public class RestEndpoint {
             }
         }
 
-        ArrayList<Location> adminCodes = new ArrayList<Location>();
+        Set<Location> adminCodes = new HashSet<Location>();
         for(String location: uniqueLocations){
-                System.out.println("Querying " + location);
                 adminCodes.add(GeonamesUtils.getData(location));
         }
         return adminCodes;

@@ -47,4 +47,26 @@ public class Location {
                 ", type='" + type + '\'' +
                 '}';
     }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Location location = (Location) o;
+
+        if (country != null ? !country.equals(location.country) : location.country != null) return false;
+        if (name != null ? !name.equals(location.name) : location.name != null) return false;
+        return type != null ? type.equals(location.type) : location.type == null;
+
+    }
+
+    @Override
+    public int hashCode() {
+        int result = country != null ? country.hashCode() : 0;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + (type != null ? type.hashCode() : 0);
+        return result;
+    }
 }
