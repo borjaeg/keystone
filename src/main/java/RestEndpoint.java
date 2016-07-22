@@ -81,7 +81,7 @@ public class RestEndpoint {
 
         System.out.println("Not in mongoDB... calculating");
 
-        List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(name,year);
+        List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(name,year).subList(0,1);
 
         Set<String> uniqueLocations = new HashSet<>();
 
