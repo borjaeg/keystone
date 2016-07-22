@@ -97,7 +97,10 @@ public class RestEndpoint {
 
         Set<Location> adminCodes = new HashSet<Location>();
         for(String location: uniqueLocations){
+            Location loc = GeonamesUtils.getData(location);
+            if(loc != null) {
                 adminCodes.add(GeonamesUtils.getData(location));
+            }
         }
 
         result = new ArrayList<Location>();
