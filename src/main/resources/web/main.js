@@ -58,7 +58,11 @@ $(document).ready(function() {
             if (e.keyCode == 13) {
                 for (var i = 0; i < markers.length; i++)
                     earth.removeMarker(markers[i]);
-                var path = "path?name=" + $("#keywords").val() + "&season=" + $("#season").val();
+                if ($("#season").length>1){
+                    var path = "path?name=" + $("#keywords").val() + "&season=" + $("#season").val();
+                } else {
+                    var path = "path?name=" + $("#keywords").val();
+                }
                 $.get(path, function(data) {
                     console.log(data);
                     fly(data[0].lat, data[0].lon);
@@ -83,7 +87,12 @@ $(document).ready(function() {
                         if (e.results[i].isFinal) {
                             textarea.value += e.results[i][0].transcript;
                             console.log(e.results[i][0].transcript);
-                            var path = "path?name=" + e.results[i][0].transcript + "&season=" + $("#season").val();
+                            if ($("#season").length>1){
+                                var path = "path?name=" + e.results[i][0].transcript + "&season=" + $("#season").val();
+                            } else {
+                                var path = "path?name=" + e.results[i][0].transcript;
+                            }
+
                             $.get(path, function(data) {
                                 console.log(data);
                                 fly(data[0].lat, data[0].lon);
