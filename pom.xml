@@ -29,6 +29,11 @@
         <artifactId>geonames</artifactId>
         <version>1.0</version>
     </dependency>
+    <dependency>
+        <groupId>com.sparkjava</groupId>
+        <artifactId>spark-core</artifactId>
+        <version>2.5</version>
+    </dependency>
 </dependencies>
 
 </project>

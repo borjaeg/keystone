@@ -3,9 +3,17 @@ import edu.stanford.nlp.ie.crf.CRFClassifier;
 
 public class NERProcessing {
 
-    public static String process(String abstracts) {
+
+
+    private AbstractSequenceClassifier classifier;
+
+    public NERProcessing(){
         String serializedClassifier = "stanford-ner/classifiers/english.all.3class.distsim.crf.ser.gz";
-        AbstractSequenceClassifier classifier = CRFClassifier.getClassifierNoExceptions(serializedClassifier);
+        classifier = CRFClassifier.getClassifierNoExceptions(serializedClassifier);
+    }
+
+    public String process(String abstracts) {
+
         // System.out.println(classifier.classifyToString(abstracts));
         return classifier.classifyWithInlineXML(abstracts);
     }

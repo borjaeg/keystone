@@ -15,13 +15,14 @@ public class IntegratedApp {
         System.out.print("Enter the hurricane year: ");
         String year = input.nextLine();
         String[] keywords = new String[]{name, year};
-        List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(keywords);
+        List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(name,Integer.parseInt(year));
 
+        NERProcessing nerp = new NERProcessing();
         for (Hurricane hurricane : hurricanes){
             System.out.println(hurricane.abstract_);
-            String processed = NERProcessing.process(hurricane.abstract_);
+
+            String processed = nerp.process(hurricane.abstract_);
             Set<String> locations = Utils.getLocations(processed);
-            System.out.println("Locations: " + locations);
             ArrayList<Location> adminCodes = new ArrayList<Location>();
             for(String location : locations){
                 adminCodes.add(GeonamesUtils.getData(location));

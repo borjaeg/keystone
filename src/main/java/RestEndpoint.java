@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import static spark.Spark.get;
@@ -6,6 +8,8 @@ import static spark.Spark.get;
  * Created by ismaro3 on 22/07/16.
  */
 public class RestEndpoint {
+
+    static NERProcessing nerp = new NERProcessing();
 
     public static void main(String[] args) {
         get("/path", (req, res) -> {
@@ -43,7 +47,25 @@ public class RestEndpoint {
 
 
 
+
         });
+    }
+
+
+    public static void calculate(String name, Integer year){
+        List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(name,year);
+
+        for (Hurricane hurricane : hurricanes){
+
+
+            String processed = nerp.process(hurricane.abstract_);
+            Set<String> locations = Utils.getLocations(processed);
+            ArrayList<Location> adminCodes = new ArrayList<Location>();
+            for(String location : locations){
+                adminCodes.add(GeonamesUtils.getData(location));
+            }
+            System.out.println("Full data: " + adminCodes);
+        }
     }
 
 }
