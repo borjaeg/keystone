@@ -11,7 +11,8 @@ public class GeonamesUtils {
     public static Location getData(String location){
         ArrayList<String> retrieved = MongoUtils.retrieveGeonames(location);
         if(retrieved != null){
-            return new Location(location, retrieved.get(0), retrieved.get(1), retrieved.get(2));
+            return new Location(location, retrieved.get(0), retrieved.get(1), retrieved.get(2),
+                    new Double(retrieved.get(3)), new Double(retrieved.get(4)));
         } else {
             // User enabled for consulting the Geonames API
             WebService.setUserName("piraces");
@@ -30,7 +31,7 @@ public class GeonamesUtils {
                     Toponym toponym = toponyms.get(0);
                     // Split feature class name to get the first class
                     location2 = new Location(location, toponym.getCountryName(), toponym.getAdminName1(),
-                            toponym.getFeatureClassName().split(",")[0]);
+                            toponym.getFeatureClassName().split(",")[0], toponym.getLatitude(), toponym.getLongitude());
                 } else {
                     location2 = null;
                 }

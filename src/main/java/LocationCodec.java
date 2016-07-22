@@ -20,9 +20,11 @@ public class LocationCodec implements Codec<Location> {
         String country = reader.readString("country");
         String type = reader.readString("type");
         String original = reader.readString("original");
+        Double lat = reader.readDouble("lat");
+        Double lon = reader.readDouble("lon");
         reader.readEndDocument();
 
-        Location user = new Location(original, country, name, type);
+        Location user = new Location(original, country, name, type, lat, lon);
         return user;
     }
 
@@ -36,6 +38,10 @@ public class LocationCodec implements Codec<Location> {
         writer.writeString(user.getCountry());
         writer.writeName("type");
         writer.writeString(user.getType());
+        writer.writeName("lat");
+        writer.writeDouble(user.getLat());
+        writer.writeName("lon");
+        writer.writeDouble(user.getLon());
         writer.writeEndDocument();
     }
 

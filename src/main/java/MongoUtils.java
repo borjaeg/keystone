@@ -50,7 +50,9 @@ public class MongoUtils {
         Document doc = new Document("name", location.getName())
                 .append("country", location.getCountry())
                 .append("type", location.getType())
-                .append("original", location.getOriginal());
+                .append("original", location.getOriginal())
+                .append("lat", location.getLat())
+                .append("lon", location.getLon());
         connect("geonames").insertOne(doc);
     }
 
@@ -61,6 +63,8 @@ public class MongoUtils {
             result.add(myDoc.getString("country"));
             result.add(myDoc.getString("name"));
             result.add(myDoc.getString("type"));
+            result.add(myDoc.getDouble("lat").toString());
+            result.add(myDoc.getDouble("lon").toString());
             return result;
         } catch(Exception ex){
             return null;
