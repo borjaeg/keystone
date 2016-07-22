@@ -19,8 +19,8 @@ public class RestEndpoint {
 
     public static void main(String[] args) {
 
-        us
-                
+        
+
 
         staticFileLocation("/web");
 
