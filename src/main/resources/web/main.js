@@ -6,16 +6,16 @@ $(document).ready(function() {
     function fly(lat, long) {
         console.log(lat, long);
         earth.fitBounds([
-            [lat-5, long-5],
-            [lat+5, long+5]
+            [lat-25, long-10],
+            [lat+10, long+10]
         ]);
         earth.panInsideBounds([
-            [lat+5, long-5],
-            [lat+5, long-5]
+            [lat-25, long-10],
+            [lat+10, long-10]
         ], {
-            heading: 60,
-            tilt: 25,
-            duration: 2
+            heading: 10,
+            tilt: 10,
+            duration: 3
         });
     }
 
