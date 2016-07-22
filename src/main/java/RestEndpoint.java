@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -39,7 +40,7 @@ public class RestEndpoint {
                 return "Error, please add at least name";
             }
             else{
-                return "[{\"city\":\"Zaragoza\"}]";
+                return calculate(name,season);
 
 
                // return DataRetriever.getHurricanesForKeywords(new String[]{name,season});
@@ -49,23 +50,32 @@ public class RestEndpoint {
 
 
         });
+
+        //calculate("Katrina",2005);
     }
 
 
-    public static void calculate(String name, Integer year){
+    public static ArrayList<Location> calculate(String name, Integer year){
         List<Hurricane> hurricanes = DataRetriever.getHurricanesForKeywords(name,year);
+
+        Set<String> uniqueLocations = new HashSet<>();
 
         for (Hurricane hurricane : hurricanes){
 
-
-            String processed = nerp.process(hurricane.abstract_);
+            String processed = nerp.process(hurricane.abstract_);   //Extract processed text
             Set<String> locations = Utils.getLocations(processed);
-            ArrayList<Location> adminCodes = new ArrayList<Location>();
-            for(String location : locations){
-                adminCodes.add(GeonamesUtils.getData(location));
+            //Put locations in uniqueLocations
+            for(String loc: locations){
+                uniqueLocations.add(loc);
             }
-            System.out.println("Full data: " + adminCodes);
         }
+
+        ArrayList<Location> adminCodes = new ArrayList<Location>();
+        for(String location: uniqueLocations){
+                System.out.println("Querying " + location);
+                adminCodes.add(GeonamesUtils.getData(location));
+        }
+        return adminCodes;
     }
 
 }
