@@ -47,7 +47,10 @@ public class IntegratedApp {
                 System.out.println("Locations: " + locations);
                 ArrayList<Location> adminCodes = new ArrayList<Location>();
                 for(String location : locations){
-                    adminCodes.add(GeonamesUtils.getData(location));
+                    Location loc = GeonamesUtils.getData(location);
+                    if(loc != null) {
+                        adminCodes.add(loc);
+                    }
                 }
                 System.out.println("Full data: " + adminCodes);
                 // Inserts in MongoDB cache
