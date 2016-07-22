@@ -36,12 +36,11 @@ $(document).ready(function() {
         WE.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(earth);
 
 
-
         // voice recognition
         var recognition = new webkitSpeechRecognition();
         recognition.continuous = true;
         recognition.interimResults = true;
-        $('.speech').click(function() {
+        $('#activateMicrophone').click(function() {
             if (isMicrophoneActive){
                 recognition.stop();
                 $(this).toggleClass('saturate');
